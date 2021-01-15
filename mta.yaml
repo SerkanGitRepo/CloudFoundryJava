@@ -1,0 +1,9 @@
+_schema-version: 2.1.0
+ID: com.zorlu.btb.node.hello.world
+version: 1.0.0
+description: A Hello World sample application 2
+provider: SAP Sample generator
+modules:
+  - name: btb.node.hello.world
+    type: nodejs
+    path: .
