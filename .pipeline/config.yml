@@ -2,6 +2,7 @@ general:
 steps:
   mtaBuild:
     buildTarget: 'CF'
+    npmExecuteLint: true
 
   cloudFoundryDeploy:
     deployTool: 'mtaDeployPlugin'
