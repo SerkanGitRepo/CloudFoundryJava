@@ -36,7 +36,6 @@ app.get(url + '/:id', function (req, res) {
 app.post(url, function (req, res) {
 
     var newUser = req.body;
-var xty;
 
     newUser.id = users.length;
     users.push(newUser);

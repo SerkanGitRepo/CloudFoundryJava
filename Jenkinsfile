@@ -7,6 +7,11 @@ node() {
 	stage('build') {
 		mtaBuild script: this
 	}
+	
+	stage('security'){
+		
+	}
+	
 	stage('deploy') {
 		cloudFoundryDeploy script: this
 	}

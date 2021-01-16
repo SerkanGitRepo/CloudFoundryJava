@@ -11,3 +11,8 @@ steps:
       org: 'a004cb52trial'
       space: 'dev'
       credentialsId: 'CF_IDENTITY_FOR_JENKINS'
+  
+  whitesourceExecuteScan:
+    projectNames: 'CloudFoundryJava'
+    stashContent:
+      - 'source'    
