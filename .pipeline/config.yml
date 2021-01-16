@@ -13,6 +13,7 @@ stages:
     mtaBuild:
       buildTarget: 'CF'
       npmExecuteLint: true
+      
   Release:
     cloudFoundryDeploy:
       deployTool: 'mtaDeployPlugin'
