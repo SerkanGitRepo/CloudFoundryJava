@@ -13,6 +13,6 @@ steps:
       credentialsId: 'CF_IDENTITY_FOR_JENKINS'
   
   whitesourceExecuteScan:
-    projectNames: 'CloudFoundryJava'
+    projectNames: 'btb.node.hello.world'
     stashContent:
       - 'source'
