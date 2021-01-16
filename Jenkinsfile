@@ -9,7 +9,7 @@ node() {
 	}
 	
 	stage('security'){
-		
+		whitesourceExecuteScan: this
 	}
 	
 	stage('deploy') {

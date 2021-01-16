@@ -15,4 +15,4 @@ steps:
   whitesourceExecuteScan:
     projectNames: 'CloudFoundryJava'
     stashContent:
-      - 'source'    
+      - 'source'
