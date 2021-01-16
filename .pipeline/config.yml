@@ -1,18 +1,28 @@
 general:
-steps:
-  mtaBuild:
-    buildTarget: 'CF'
-    npmExecuteLint: true
 
-  cloudFoundryDeploy:
-    deployTool: 'mtaDeployPlugin'
-    deployType: 'standard'
-    cloudFoundry:
-      org: 'a004cb52trial'
-      space: 'dev'
-      credentialsId: 'CF_IDENTITY_FOR_JENKINS'
+
+steps:
+  artifactPrepareVersion:
+    versioningType: cloud_noTag
+
+stages:
+  Confirm:
+    manualConfirmation: false
   
-  whitesourceExecuteScan:
-    projectNames: 'btb.node.hello.world'
-    stashContent:
-      - 'source'
+  Build:     
+    mtaBuild:
+      buildTarget: 'CF'
+      npmExecuteLint: true
+  Release:
+    cloudFoundryDeploy:
+      deployTool: 'mtaDeployPlugin'
+      deployType: 'standard'
+      cloudFoundry:
+        org: 'a004cb52trial'
+        space: 'dev'
+        credentialsId: 'CF_IDENTITY_FOR_JENKINS'
+  
+#   whitesourceExecuteScan:
+#     projectNames: 'btb.node.hello.world'
+#     stashContent:
+#       - 'source'
